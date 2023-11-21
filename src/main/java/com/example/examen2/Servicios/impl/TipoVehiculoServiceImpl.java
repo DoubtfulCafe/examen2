@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.examen2.Modelos.TipoVehiculo;
-import com.example.examen2.Modelos.TipoVehiculo;
 import com.example.examen2.Repositorios.TipoVehiculoRepository;
 import com.example.examen2.Servicios.TipoVehiculoService;
 
