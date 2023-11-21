@@ -1,4 +1,5 @@
 package com.example.examen2.Modelos;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,7 +35,7 @@ public class Vehiculo {
     @Column(name="disponible")
     private boolean disponible;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "idtipovehiculo", referencedColumnName = "idtipovehiculo")
     private TipoVehiculo tipoVehiculo;
 

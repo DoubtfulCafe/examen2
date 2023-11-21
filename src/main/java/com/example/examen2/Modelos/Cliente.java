@@ -2,6 +2,7 @@ package com.example.examen2.Modelos;
 
 import java.util.Date;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,7 +37,7 @@ public class Cliente {
     @Column(name="fechaingreso")
     Date fechaIngreso;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "idtipocliente",referencedColumnName = "idtipocliente")
     private TipoCliente tipoCliente;
 
