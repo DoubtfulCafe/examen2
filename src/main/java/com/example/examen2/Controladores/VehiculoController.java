@@ -10,39 +10,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.examen2.Modelos.Cliente;
-import com.example.examen2.Servicios.impl.ClienteServiceImpl;
+import com.example.examen2.Modelos.Vehiculo;
+import com.example.examen2.Servicios.impl.VehiculoServiceImpl;
 
 @RestController
-@RequestMapping("/api/cliente")
-public class ClienteController {
+@RequestMapping("/api/Vehiculo")
+public class VehiculoController {
 
 @Autowired
-private ClienteServiceImpl clienteServiceImpl;
+private VehiculoServiceImpl VehiculoServiceImpl;
 
 
 @PostMapping("/guardar")
-public Cliente guardarCliente(@RequestBody Cliente nvoCliente){
+public Vehiculo guardarVehiculo(@RequestBody Vehiculo nvoVehiculo){
 
-return this.clienteServiceImpl.guardarCliente(nvoCliente);
+return this.VehiculoServiceImpl.guardarVehiculo(nvoVehiculo);
 }
 
 @GetMapping("/todos")
-public List<Cliente> ObtenerTodosClientes(){
-return this.clienteServiceImpl.ObtenerTodosClientes();
+public List<Vehiculo> ObtenerTodosVehiculos(){
+return this.VehiculoServiceImpl.ObtenerTodosVehiculos();
 }
 @GetMapping("/consultar")
-public Cliente ObtenerCliente(@RequestParam(name="id") int id){
+public Vehiculo ObtenerVehiculo(@RequestParam(name="id") int id){
 
-    return this.clienteServiceImpl.ObtenerCliente(id);
+    return this.VehiculoServiceImpl.ObtenerVehiculo(id);
 }
-
-
-
-
-
-
-
-
-
 }
