@@ -22,7 +22,7 @@ import lombok.Setter;
 
 public class Reserva {
     @Id
-    @Column(name="idReserva")
+    @Column(name="idreserva")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idReserva;
 

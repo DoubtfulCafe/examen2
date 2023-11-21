@@ -23,7 +23,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Cliente {
     @Id
-    @Column(name="codigoCliente")
+    @Column(name="codigocliente")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigoCliente;
 
