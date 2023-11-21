@@ -35,7 +35,7 @@ public class Vehiculo {
     private boolean disponible;
 
     @ManyToOne
-    @JoinColumn(name = "idtipovehiculo")
+    @JoinColumn(name = "idtipovehiculo", referencedColumnName = "idtipovehiculo")
     private TipoVehiculo tipoVehiculo;
 
     
